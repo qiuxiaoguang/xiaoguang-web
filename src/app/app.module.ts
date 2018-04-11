@@ -8,10 +8,10 @@ import { SiteFooterComponent } from '../components/site-footer/site-footer.compo
 import { SiderbarComponent } from '../components/siderbar/siderbar.component';
 
 
-import { SummarizeLiteraturesComponent } from './summarize-literatures/summarize-literatures.component';
-import { SummarizeTechnologyComponent } from './summarize-technology/summarize-technology.component';
-import { SummarizeCultivateComponent } from './summarize-cultivate/summarize-cultivate.component';
-import { SummarizeAboutmeComponent } from './summarize-aboutme/summarize-aboutme.component';
+import { SummarizeLiteraturesComponent } from '../pages/summarize/summarize-literatures/summarize-literatures.component';
+import { SummarizeTechnologyComponent } from '../pages/summarize/summarize-technology/summarize-technology.component';
+import { SummarizeCultivateComponent } from '../pages/summarize/summarize-cultivate/summarize-cultivate.component';
+import { SummarizeAboutmeComponent } from '../pages/summarize/summarize-aboutme/summarize-aboutme.component';
 
 import { LiteraturesComponent } from '../pages/literatures/literatures.component';
 import { TechnologyComponent } from '../pages/technology/technology.component';
