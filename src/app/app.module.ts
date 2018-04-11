@@ -9,6 +9,8 @@ import { SiderbarComponent } from '../components/siderbar/siderbar.component';
 import { LiteraturesComponent } from '../pages/literatures/literatures.component';
 import { TechnologyComponent } from '../pages/technology/technology.component';
 import { CultivateComponent } from '../pages/cultivate/cultivate.component';
+import { AboutMeComponent } from '../pages/about-me/about-me.component';
+import { HomeComponent } from '../pages/home/home.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { CultivateComponent } from '../pages/cultivate/cultivate.component';
     SiderbarComponent,
     LiteraturesComponent,
     TechnologyComponent,
-    CultivateComponent
+    CultivateComponent,
+    AboutMeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule
