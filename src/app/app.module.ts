@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {LocationStrategy, HashLocationStrategy, APP_BASE_HREF} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { SiteHeaderComponent } from '../components/site-header/site-header.component';
@@ -65,7 +66,10 @@ export const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: APP_BASE_HREF, useValue: '/' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
