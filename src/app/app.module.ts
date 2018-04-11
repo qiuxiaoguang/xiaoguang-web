@@ -11,6 +11,7 @@ import { TechnologyComponent } from '../pages/technology/technology.component';
 import { CultivateComponent } from '../pages/cultivate/cultivate.component';
 import { AboutMeComponent } from '../pages/about-me/about-me.component';
 import { HomeComponent } from '../pages/home/home.component';
+import { SummarizeComponent } from '../pages/summarize/summarize.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HomeComponent } from '../pages/home/home.component';
     TechnologyComponent,
     CultivateComponent,
     AboutMeComponent,
-    HomeComponent
+    HomeComponent,
+    SummarizeComponent
   ],
   imports: [
     BrowserModule
