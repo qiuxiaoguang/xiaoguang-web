@@ -7,6 +7,8 @@ import { SiteHeaderComponent } from '../components/site-header/site-header.compo
 import { SiteFooterComponent } from '../components/site-footer/site-footer.component';
 import { SiderbarComponent } from '../components/siderbar/siderbar.component';
 import { LiteraturesComponent } from '../pages/literatures/literatures.component';
+import { TechnologyComponent } from '../pages/technology/technology.component';
+import { CultivateComponent } from '../pages/cultivate/cultivate.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { LiteraturesComponent } from '../pages/literatures/literatures.component
     SiteHeaderComponent,
     SiteFooterComponent,
     SiderbarComponent,
-    LiteraturesComponent
+    LiteraturesComponent,
+    TechnologyComponent,
+    CultivateComponent
   ],
   imports: [
     BrowserModule
