@@ -1,18 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SiteHeaderComponent } from '../components/site-header/site-header.component';
 import { SiteFooterComponent } from '../components/site-footer/site-footer.component';
 import { SiderbarComponent } from '../components/siderbar/siderbar.component';
+
+
+import { SummarizeLiteraturesComponent } from './summarize-literatures/summarize-literatures.component';
+import { SummarizeTechnologyComponent } from './summarize-technology/summarize-technology.component';
+import { SummarizeCultivateComponent } from './summarize-cultivate/summarize-cultivate.component';
+import { SummarizeAboutmeComponent } from './summarize-aboutme/summarize-aboutme.component';
+
 import { LiteraturesComponent } from '../pages/literatures/literatures.component';
 import { TechnologyComponent } from '../pages/technology/technology.component';
 import { CultivateComponent } from '../pages/cultivate/cultivate.component';
 import { AboutMeComponent } from '../pages/about-me/about-me.component';
 import { HomeComponent } from '../pages/home/home.component';
-import { SummarizeComponent } from '../pages/summarize/summarize.component';
 
+
+export const routes: Routes = [
+
+  {
+    path: 'home', component: HomeComponent
+  },
+  {
+    path: 'summarize',
+    children: [
+      { path: 'literatures', component: SummarizeLiteraturesComponent },
+      { path: 'technology', component: SummarizeTechnologyComponent },
+      { path: 'cultivate', component: SummarizeCultivateComponent },
+      { path: 'aboutme', component: SummarizeAboutmeComponent },
+
+      { path: 'literatures/:id', component: LiteraturesComponent },
+      { path: 'technology/:id', component: TechnologyComponent },
+      { path: 'cultivate/:id', component: CultivateComponent },
+
+      { path: '', redirectTo: 'home', pathMatch: 'full' }
+    ]  
+  },
+  {
+    path: '', redirectTo: 'home', pathMatch: 'full' 
+  },
+]
 
 @NgModule({
   declarations: [
@@ -25,10 +56,14 @@ import { SummarizeComponent } from '../pages/summarize/summarize.component';
     CultivateComponent,
     AboutMeComponent,
     HomeComponent,
-    SummarizeComponent
+    SummarizeLiteraturesComponent,
+    SummarizeTechnologyComponent,
+    SummarizeCultivateComponent,
+    SummarizeAboutmeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
